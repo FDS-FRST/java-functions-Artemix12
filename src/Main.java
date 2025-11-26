@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -10,7 +11,7 @@ public class Main {
      * @return the input name
      */
     public static String greet(String name) {
-        throw new UnsupportedOperationException("Not yet implemented!");
+        return name;
     }
 
 
@@ -22,7 +23,8 @@ public class Main {
      * @return the sum of the two integers
      */
     public static int add(int a, int b) {
-        throw new UnsupportedOperationException("Not yet implemented!");
+
+        return a+b;
     }
 
     /**
@@ -32,7 +34,7 @@ public class Main {
      * @return
      */
     public static boolean isEven(int number) {
-        throw new UnsupportedOperationException("Not yet implemented!");
+       return number%2 == 0;
     }
 
     /**
@@ -42,7 +44,8 @@ public class Main {
      * @return
      */
     public static double areaOfCircle(double radius) {
-        throw new UnsupportedOperationException("Not yet implemented!");
+        double pi = 3.14;
+        return pi*radius*radius;
     }
 
     /**
@@ -57,7 +60,17 @@ public class Main {
      * @return
      */
     public static String grade(int score) {
-        throw new UnsupportedOperationException("Not yet implemented!");
+        if(score >= 90){
+            return "A";
+        }else if(score == 80 || score == 89){
+            return "B";
+        }else if(score == 70 || score == 79){
+            return "C";
+        }else if(score == 60  || score == 69){
+            return "D";
+        }else{
+            return "F";
+        }
     }
 
     /**
@@ -69,7 +82,15 @@ public class Main {
      * @return
      */
     public static int maxOfThree(int a, int b, int c) {
-        throw new UnsupportedOperationException("Not yet implemented!");
+       if(a>b && a>c )
+       {
+           return a;
+       }else if(b>a && b>c)
+       {
+           return b;
+       }else{
+           return c;
+       }
     }
 
     /**
@@ -79,7 +100,8 @@ public class Main {
      * @return
      */
     public static double toFahrenheit(double celsius) {
-        throw new UnsupportedOperationException("Not yet implemented!");
+        double convertInFahrenheit = celsius*9/5 +32;
+        return convertInFahrenheit;
     }
 
     /**
@@ -90,7 +112,8 @@ public class Main {
      * @return
      */
     public static double applyDiscount(double price, double discount) {
-        throw new UnsupportedOperationException("Not yet implemented!");
+      double calculateDiscount = price - discount;
+      return calculateDiscount;
     }
 
 
@@ -101,7 +124,15 @@ public class Main {
      * @return
      */
     public static List<Integer> filterEvenNumbers(List<Integer> numbers) {
-        throw new UnsupportedOperationException("Not yet implemented!");
+      List<Integer> evenNumbers = new ArrayList<>();
+      for (Integer n: numbers){
+
+          if(n %2 == 0){
+              evenNumbers.add(n);
+          }
+
+      }
+      return evenNumbers;
     }
 
     /**
@@ -111,7 +142,11 @@ public class Main {
      * @return
      */
     public static int factorial(int n) {
-        throw new UnsupportedOperationException("Not yet implemented!");
+       if(n<=1){
+           return 1;
+       }
+
+       return n * factorial(n-1);
     }
 
     /**
@@ -121,7 +156,14 @@ public class Main {
      * @return
      */
     public static int fibonacci(int n) {
-        throw new UnsupportedOperationException("Not yet implemented!");
+      if(n ==0){
+          return 0;
+      }
+      if(n==1){
+          return 1;
+      }
+
+      return fibonacci(n-1) + fibonacci(n-2);
     }
 
 
